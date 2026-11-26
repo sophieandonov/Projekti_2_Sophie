@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elokuvahaku - TMDB AJAX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 Elokuvahaku</h1>
+        <p>Selaa suosittuja elokuvia tai etsi suosikkejasi reaaliajassa</p>
+    </header>
+
+    <main class="container">
+        <!-- Hakulomake ja suodattimet (vaatimus 4) -->
+        <section class="controls">
+            <form id="search-form" class="search-group">
+                <input type="text" id="search-input" placeholder="Kirjoita elokuvan nimi..." aria-label="Elokuvan nimi">
+                <button type="submit" id="search-btn">Hae</button>
+            </form>
+
+            <div class="filter-group">
+                <label for="category-select">Tai selaa listaa:</label>
+                <select id="category-select">
+                    <option value="popular">Suosituimmat</option>
+                    <option value="top_rated">Parhaiten arvioidut</option>
+                    <option value="upcoming">Tulossa pian</option>
+                    <option value="now_playing">Nyt elokuvateattereissa</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Tilaviestit (lataus / virheet) -->
+        <div id="status-message" class="status-message"></div>
+
+        <!-- Tulosalue elokuvakorteille -->
+        <section id="movies-grid" class="movies-grid"></section>
+    </main>
+
+    <footer>
+        <p>Tämä tuote käyttää TMDB-rajapintaa, mutta ei ole TMDB:n virallisesti tukema.</p>
+    </footer>
+
+    <!-- Oma natiivi JavaScript-tiedosto -->
+    <script src="app.js"></script>
+</body>
+</html>
