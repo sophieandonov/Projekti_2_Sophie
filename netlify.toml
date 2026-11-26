@@ -1,0 +1,6 @@
+# This repository is a plain static site: there is no framework, package
+# manager or build step. Netlify publishes the files in the repository root
+# as-is. Add an index.html here to serve a home page.
+[build]
+  publish = "."
+  command = ""
